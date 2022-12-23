@@ -10,7 +10,7 @@ Este proyecto no es con fines lucrativos.
 
 ¡Feliz Navidad!
 
-<!--        Ve esto en tu editor de código. <3
+    Ve esto en tu editor de código. <3
                                  |
                                \ ' /
                              -- (*) --
@@ -32,4 +32,4 @@ Este proyecto no es con fines lucrativos.
            |'.'.'.|   ^^^^^^|____|>>TMR>>|
            ~~~~~~~~         '""""`-------'
        ¡Feliz Navidad!
--->
+
