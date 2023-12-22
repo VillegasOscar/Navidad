@@ -4,14 +4,15 @@ const nieve = document.querySelector(".nieve");
 const audioSources = ["sound/navidad.mp3", "sound/navidad2.mp3", "sound/navidad3.mp3"];
 const audioSources2 = ["sound/1.mp3", "sound/2.mp3", "sound/3.mp3", "sound/4.mp3", "sound/5.mp3", "sound/6.mp3", "sound/7.mp3", "sound/8.mp3", "sound/9.mp3"];
 const player = document.getElementById("player");
+const player2 = document.getElementById("player2");
 let animacion = document.querySelectorAll(".main-container");
 const heart = document.querySelector(".heart");
 const animationHeart = document.querySelector(".animation-heart");
 
 document.getElementById('player').style.display = 'none';
 document.getElementById('bg').style.display = 'none';
-player.addEventListener('ended', playAudio);
-//player2.addEventListener('ended', playAudio2);
+//player.addEventListener('ended', playAudio);
+player2.addEventListener('ended', playAudio2); //faltando 1h
 
 
 window.addEventListener('load', animar);
@@ -96,8 +97,8 @@ function playAudio2() {
     player2.src = audioSource;
 };
 
-// document.getElementById('player').style.display = 'block';
-playAudio();  //faltando 1 hora
+document.getElementById('player').style.display = 'block';
+playAudio2();  //faltando 1 hora
 
 //API de cuenta regresiva
 simplyCountdown('#cuenta', {
@@ -154,4 +155,3 @@ animationHeart.addEventListener('click', () => {
 // $(document).ready(function () {
 //     new AnimateBG("canvasBG", "http://sd.uploads.im/t/z7xY4.png").start();
 // });
-
