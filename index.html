@@ -35,11 +35,15 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body onload="autoplay()">
+    
+    
     <div class="portada" id="portada">
+        <audio style="display: none;" id="player" autoplay controls></audio>
+        
         <div class="header">
-            
             <div class="nieve"></div>
+            
             <h1>Villegas Studios</h1>
             <h2>Usa audifonos para una mejor experiencia.</h2>
             <p class="mensaje">Queda poco tiempo para la sorpresa... </p>
@@ -53,12 +57,10 @@
 
     <main class="contenedor">
         <br>
-        <audio style="display: none;" id="player" controls autoplay></audio>
-        <audio style="display: none;" id="player2" controls autoplay>
-        </audio>
+        <audio style="display: none;" id="player2" autoplay controls></audio>
         <main class="main-container">
-            <h1>¡Feliz navidad!</h1>
-            <p>Te desea: Oscar Villegas :)</p>
+            <h1>¡Feliz noche buena, feliz navidad y próximo año 2024!</h1>
+            <p>Les desea Oscar Villlegas (<span class="typing"></span>)</p>
         </main>
     </main>
 
@@ -70,6 +72,7 @@
 
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="css&js/js/simplyCountdown.min.js"></script>
     <script src="css&js/js/index.js"></script>
 

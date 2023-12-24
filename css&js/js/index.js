@@ -2,19 +2,32 @@ const treeContainer = document.createElement("pre");
 const mainContainer = document.querySelector(".main-container");
 const nieve = document.querySelector(".nieve");
 const audioSources = ["sound/navidad.mp3", "sound/navidad2.mp3", "sound/navidad3.mp3", "sound/navidad4.mp3", "sound/navidad5.mp3"];
-const audioSources2 = [""];
+const audioSources2 = ["sound/navidad20.mp3", "sound/navidad21.mp3", "sound/navidad22.mp3", "sound/navidad23.mp3", "sound/navidad24.mp3"];
 const player = document.getElementById("player");
 const player2 = document.getElementById("player2");
 let animacion = document.querySelectorAll(".main-container");
 const heart = document.querySelector(".heart");
 const animationHeart = document.querySelector(".animation-heart");
+let des = 0;
 
 document.getElementById('player').style.display = 'block';
-document.getElementById('player2').style.display = 'none';
+//document.getElementById('player2').style.display = 'block';
 document.getElementById('bg').style.display = 'none';
 player.addEventListener('ended', playAudio);
-//player2.addEventListener('ended', playAudio2); //faltando 1h
+player2.addEventListener('ended', playAudio2); //faltando 1h
 playAudio();
+
+function autoplay() {
+    if (des = 0) {
+        player.play()
+    } else {
+        player.pause()
+        player2.play()
+
+    }
+}
+
+
 
 
 window.addEventListener('load', animar);
@@ -99,6 +112,7 @@ function playAudio2() {
     player2.src = audioSource;
 };
 
+
 //document.getElementById('player').style.display = 'none';
 //playAudio2();  //faltando 1 hora
 
@@ -107,7 +121,7 @@ simplyCountdown('#cuenta', {
     year: 2023, // required
     month: 12, // required
     day: 24, // required 24
-    hours: 15, // Default is 0 [0-23] integer 18
+    hours: 15, // Default is 0 [0-23] integer 15
     minutes: 0, // Default is 0 [0-59] integer
     seconds: 0, // Default is 0 [0-59] integer
     words: { //words displayed into the countdown
@@ -123,11 +137,13 @@ simplyCountdown('#cuenta', {
     // in case of inline set to false
     enableUtc: true, //Use UTC as default
     onEnd: function () {
+        des = 1
         document.getElementById('portada').classList.add('oculta');
-        document.getElementById('player').style.display = 'block';
+        document.getElementById('player').style.display = 'none';
+        player.pause();
+        document.getElementById('player2').style.display = 'block';
         document.getElementById('bg').style.display = 'block';
-        createSnow(300);
-        playAudio();
+        playAudio2();
         return;
     }, //Callback on countdown end, put your own function here
     refresh: 1000, // default refresh every 1s
@@ -152,6 +168,14 @@ animationHeart.addEventListener('click', () => {
     animationHeart.classList.remove('animation')
     heart.classList.remove('fill-color')
 })
+
+// typing text animation script
+var typed = new Typed(".typing", {
+    strings: ["Muñaño", "Chava", "Compie", "Airashi", "Pudin", "Bebé", "Hermoso", "Chiquito"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
 
 // //Canvas del botón
 // $(document).ready(function () {

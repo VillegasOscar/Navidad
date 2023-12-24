@@ -248,16 +248,16 @@ function GanarPuntos() {
     textoScore.innerText = score;
     audioMoneda.currentTime = 0;
     audioMoneda.play();
-    if (score == 3) {
-        gameVel = 1.2;
+    if (score == 10) {
+        //gameVel = 1.2;
         contenedor.classList.add("mediodia");
-    } else if (score == 10) {
-        gameVel = 1.5;
+    } else if (score == 20) {
+        gameVel = 1.2;
         contenedor.classList.add("tarde");
-    } else if (score == 15) {
-        gameVel = 1.8;
+    } else if (score == 30) {
+        gameVel = 1.5;
         contenedor.classList.add("noche");
-    } else if (score == 24) {
+    } else if (score == 50) {
         win()
 
     }
