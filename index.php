@@ -66,7 +66,7 @@
 
     <div id="bg" class="bg">
         <div class="centerer">
-            <a href="game.html" class="button">Jugar</a>
+            <a href="game.php" class="button">Jugar</a>
         </div>
     </div>
 
