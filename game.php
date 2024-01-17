@@ -321,7 +321,7 @@
             location.reload();
         }
         function home() {
-            window.location.href = 'index.html';
+            window.location.href = 'index.php';
         }
         function playAudio() {
             let audioSource = audioSources[Math.floor(Math.random() * audioSources.length)];
